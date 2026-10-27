@@ -23,7 +23,7 @@ tools/_template/       esqueleto para una herramienta nueva
 2. Proponé un plan en pasos chicos y esperá mi aprobación.
 3. Construí un paso por vez y mostrá cada cambio.
 4. Verificá con `verificar.md`. Si no coincide, no está terminado.
-5. Si algo cambia, cambiá primero la spec y registrá el cambio en `intents/`. No toques el resultado a mano.
+5. Si algo cambia, cambiá primero la spec y registrá el cambio en `intents/`. No toques el resultado a mano. La versión inicial no lleva intent: es el Pedido de la spec.
 
 ## Principios de desarrollo
 
