@@ -6,7 +6,7 @@ Resultados calculados a mano. Si la herramienta no coincide, no está terminada.
 |---|---|---|---|
 | 1 | $1.000.000 | 9,26 UMA (primer tramo) | $220.000 a $330.000 |
 | 2 | $3.240.150 | 30 UMA (segundo tramo) | $858.639,75 a $955.844,25 |
-| 3 | $6.480.300 | 60 UMA (tercer tramo) | Depende de la lectura del art. 21 (abajo) |
+| 3 | $6.480.300 | 60 UMA (tercer tramo) | $1.555.272 a $1.652.476,50 (lectura A) |
 
 ## Cómo se llega
 
@@ -21,7 +21,7 @@ Resultados calculados a mano. Si la herramienta no coincide, no está terminada.
 | A. Tope del tramo anterior (45 x 26% = 11,7 UMA) | 11,7 UMA | 14,4 a 15,3 | $1.555.272 a $1.652.476,50 |
 | B. Acumulativa (15 x 33% + 30 x 26% = 12,75 UMA) | 12,75 UMA | 15,45 a 16,35 | $1.668.677,25 a $1.765.881,75 |
 
-La lectura la decide el abogado. Una herramienta que elige una en silencio no pasa este ejemplo.
+Rige la lectura A (ver la spec). La lectura B puede ser la que aplique el juez; la herramienta la muestra como referencia: con ella el resultado sería $1.668.677,25 a $1.765.881,75.
 
 ## Cuando cambia un dato
 

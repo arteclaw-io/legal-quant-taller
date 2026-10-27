@@ -40,7 +40,7 @@ Texto del párrafo final: los honorarios no pueden ser inferiores al máximo del
 1. Monto en UMA = monto / valor de la UMA (sin redondear).
 2. Hasta 15 UMA: mínimo = monto x % mínimo del tramo; máximo = monto x % máximo del tramo.
 3. Desde el segundo tramo: excedente = monto - (tope en UMA del tramo anterior x valor de la UMA). Mínimo = base + excedente x % mínimo del tramo; máximo = base + excedente x % máximo del tramo.
-4. La base depende de la lectura del párrafo final (ver "Decide el abogado").
+4. La base es el tope en UMA del tramo anterior x valor de la UMA x % máximo de ese tramo (lectura A, ver "Decide el abogado").
 
 ## Verificar
 
@@ -48,11 +48,13 @@ Cada ejemplo se calcula a mano en [`verificar.md`](../../verificar.md). Si la he
 
 - 1.000.000 pesos → 9,26 UMA → 220.000 a 330.000.
 - 3.240.150 pesos → 30 UMA → 858.639,75 a 955.844,25.
-- 6.480.300 pesos → 60 UMA → depende de la lectura del art. 21: 1.555.272 a 1.652.476,50 (lectura A) o 1.668.677,25 a 1.765.881,75 (lectura B).
+- 6.480.300 pesos → 60 UMA → 1.555.272 a 1.652.476,50 (lectura A; con la lectura B daría 1.668.677,25 a 1.765.881,75).
 
 ## Mostrar
 
 Paso a paso: UMA, tramo, porcentajes, cuenta y norma. "Es una estimación."
+
+Nota visible cuando el monto supera los 45 UMA (desde el tercer tramo): "Se aplicó la lectura A del último párrafo del art. 21. El juez puede aplicar la lectura B; con ella el resultado sería [mínimo B] a [máximo B]."
 
 ## Fuera de alcance
 
@@ -67,7 +69,9 @@ Lectura del párrafo final del art. 21:
 | A. Tope del tramo anterior | El tope en UMA del tramo anterior por el porcentaje máximo de ese tramo (45 UMA x 26%) | 14,4 a 15,3 UMA |
 | B. Acumulativa | La suma del máximo de cada tramo previo (15 x 33% + 30 x 26%) | 15,45 a 16,35 UMA |
 
-Coinciden hasta el segundo tramo y se separan desde el tercero. **Lectura elegida: pendiente** (intent [`fijar-lectura-del-art-21`](intents/2026-10-27-fijar-lectura-del-art-21.md)). La IA no la elige: la muestra y pregunta. Cómo aplican esta cláusula los jueces en cada caso es un tema aparte, que esta herramienta no resuelve.
+Coinciden hasta el segundo tramo y se separan desde el tercero. **Lectura elegida: A** (intent [`fijar-lectura-del-art-21`](intents/2026-10-27-fijar-lectura-del-art-21.md)). Se adopta para la versión 1 porque es la más simple de explicar; la lectura B queda documentada como alternativa. La IA no cambia de lectura sin un intent nuevo.
+
+**Nota:** la lectura B puede ser la que aplique el juez en un caso concreto, según su criterio y la jurisprudencia. La herramienta no resuelve cómo aplican la cláusula los jueces: usa A y advierte que puede ser B. Cómo aplican esta cláusula los jueces en cada caso es un tema aparte, que esta herramienta no resuelve.
 
 ## Restricciones técnicas (versión 1)
 
@@ -80,6 +84,6 @@ Coinciden hasta el segundo tramo y se separan desde el tercero. **Lectura elegid
 - 2026-10-27: versión inicial, a partir del pedido de arriba.
 - 2026-10-27: UMA a 108.005, Resolución SGA 2622/2026. Aplicado. Intent [`actualizar-uma-res-2622-2026`](intents/2026-10-27-actualizar-uma-res-2622-2026.md).
 - Propuesto, no aplicado: [`sumar-etapas-del-proceso`](intents/2026-10-27-sumar-etapas-del-proceso.md).
-- Pendiente de decisión del abogado: [`fijar-lectura-del-art-21`](intents/2026-10-27-fijar-lectura-del-art-21.md).
+- 2026-10-27: lectura A del art. 21. Aplicado. Intent [`fijar-lectura-del-art-21`](intents/2026-10-27-fijar-lectura-del-art-21.md).
 
 Cada cambio nuevo se registra como un archivo en [`intents/`](intents/) y se agrega acá.
