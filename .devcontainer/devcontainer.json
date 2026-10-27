@@ -1,0 +1,17 @@
+{
+  "name": "Legal Quant",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "customizations": {
+    "vscode": {
+      "extensions": ["yzhang.markdown-all-in-one"]
+    },
+    "codespaces": {
+      "openFiles": ["README.md", "tools/fee-calculator/SPEC.md"]
+    }
+  },
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": { "label": "Vista previa", "onAutoForward": "openPreview" }
+  },
+  "postCreateCommand": "node --version"
+}
